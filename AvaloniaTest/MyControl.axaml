@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="200"
              x:Class="AvaloniaTest.MyControl">
-	
-	<ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
-		<TextBlock TextWrapping="WrapWithOverflow" />
+
+	<ScrollViewer>
+		<TextBlock TextWrapping="Wrap" />
 	</ScrollViewer>
 </UserControl>

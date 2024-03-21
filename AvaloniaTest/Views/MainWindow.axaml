@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:local="using:AvaloniaTest"
-        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="600"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="300"
         x:Class="AvaloniaTest.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -15,16 +15,23 @@
 	</Design.DataContext>
 
 	<StackPanel>
-	<local:MyControl Grid.Column="0" Grid.Row="0"/>
+	<!--<local:MyControl Grid.Column="0" Grid.Row="0"/>-->
 	
-	<!--<Grid ColumnDefinitions="* 4 *" RowDefinitions="* 4 *">
-		<local:MyControl Grid.Column="0" Grid.Row="0"/>
-		<local:MyControl Grid.Column="0" Grid.Row="2"/>
-		<local:MyControl Grid.Column="2" Grid.Row="0"/>
-		<local:MyControl Grid.Column="2" Grid.Row="2"/>
-		<GridSplitter Grid.Column="1" Grid.RowSpan="3" Background="Black" ResizeDirection="Columns"/>
-		<GridSplitter Grid.Row="1" Grid.ColumnSpan="3" Background="Black" ResizeDirection="Rows"/>
-	</Grid>-->
+	<Grid ColumnDefinitions="100 4 100" RowDefinitions="100 4 100">
+		<local:MyControl Grid.Column="0" Grid.Row="0" Background="LightCoral"/>
+		<local:MyControl Grid.Column="0" Grid.Row="2" Background="LightCyan"/>
+		<local:MyControl Grid.Column="2" Grid.Row="0" Background="LightGray"/>
+		<local:MyControl Grid.Column="2" Grid.Row="2" Background="LightSalmon"/>
+		
+		<!-- vertical -->
+		<GridSplitter Grid.Column="1" Grid.Row="0" Background="Red" ResizeDirection="Columns"/>
+		<GridSplitter Grid.Column="1" Grid.Row="2" Background="Brown" ResizeDirection="Columns"/>
+		
+		<!-- horizontal -->
+		<GridSplitter Grid.Column="0" Grid.Row="1" Background="DarkBlue" ResizeDirection="Rows"/>
+		<GridSplitter Grid.Column="2" Grid.Row="1" Background="DarkBlue" ResizeDirection="Rows"/>
+				
+	</Grid>
 	</StackPanel>
 </Window>
 
