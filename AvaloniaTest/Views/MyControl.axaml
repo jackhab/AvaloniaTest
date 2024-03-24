@@ -5,7 +5,8 @@
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="200"
              x:Class="AvaloniaTest.MyControl">
 
-	<ScrollViewer>
-		<TextBlock TextWrapping="Wrap" />
+
+	<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
+		<TextBlock TextWrapping="WrapWithOverflow" />
 	</ScrollViewer>
 </UserControl>
