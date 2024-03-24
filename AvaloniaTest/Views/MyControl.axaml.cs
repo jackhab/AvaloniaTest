@@ -10,7 +10,7 @@ public partial class MyControl : UserControl
     {
         InitializeComponent();
 
-        Content = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        txt.Text= @"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Cras aliquet pellentesque tincidunt. 
 Quisque ut consectetur erat. 
 Suspendisse vitae ultricies turpis, sed tempus orci. 

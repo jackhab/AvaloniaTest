@@ -6,7 +6,7 @@
              x:Class="AvaloniaTest.MyControl">
 
 
-	<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
-		<TextBlock TextWrapping="WrapWithOverflow" />
-	</ScrollViewer>
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
+	    <TextBlock Name="txt" TextWrapping="WrapWithOverflow" />
+    </ScrollViewer>
 </UserControl>
