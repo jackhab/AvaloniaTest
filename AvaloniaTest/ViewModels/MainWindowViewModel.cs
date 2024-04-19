@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using CommunityToolkit.Mvvm.Input;
+using System.Collections.ObjectModel;
 
 namespace AvaloniaTest.ViewModels
 {
@@ -7,9 +8,14 @@ namespace AvaloniaTest.ViewModels
         public MainWindowViewModel()
         {
             TestItems = [];
-            for (int i = 0; i < 100; i++)
-                TestItems.Add($"ITEM                             {i}");
+            for (int i = 0; i < 5; i++)
+                TestItems.Add($"ITEM  {i}");
+        }
 
+        [RelayCommand]
+        public void OnTestButtonClick()
+        {
+            TestItems[0] = "CHECK";
         }
 
         public ObservableCollection<string> TestItems { get; set; }

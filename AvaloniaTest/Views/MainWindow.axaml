@@ -11,28 +11,19 @@
         Title="AvaloniaTest"
 		MaxHeight="400"
 		MaxWidth="800">
-	
+
 	<Design.DataContext>
 		<vm:MainWindowViewModel/>
 	</Design.DataContext>
+	<StackPanel>
+		<Button Command="{Binding OnTestButtonClick}" Content="CHECK" />
+		<ScrollViewer>
+			<DataGrid Name="RegisterGrid"
+					  ItemsSource="{Binding TestItems}"
+					  AutoGenerateColumns="True"
+					  GridLinesVisibility="All" />
+		</ScrollViewer>
+	</StackPanel>
 
-	<Grid ColumnDefinitions="*, 4, *" RowDefinitions="*, 4, *" HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch">
-		<!--left-->
-		<local:MyControl Grid.Column="0" Grid.RowSpan="3" Background="LightCoral"/>
-
-		<!-- vertical -->
-		<GridSplitter Grid.Column="1" Grid.RowSpan="3" Background="Red" ResizeDirection="Columns"/>
-
-		<!--right top-->
-		<local:MyControl Grid.Column="2" Grid.Row="0" Background="LightCyan"/>
-
-		<!-- horizontal -->
-		<GridSplitter Grid.Column="2" Grid.Row="1" Background="DarkBlue" ResizeDirection="Rows"/>
-
-		<!--right bottom-->
-		<local:MyControl Grid.Column="2" Grid.Row="2" Background="LightSalmon"/>	
-				
-	</Grid>
 </Window>
 
