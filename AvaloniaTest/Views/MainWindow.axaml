@@ -10,19 +10,19 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="AvaloniaTest"
 		MaxHeight="400"
-		MaxWidth="800">
+		MaxWidth="800"
+		Name="MainWin"
+		>
 
 	<Design.DataContext>
 		<vm:MainWindowViewModel/>
 	</Design.DataContext>
+
 	<StackPanel>
 		<Button Command="{Binding OnTestButtonClick}" Content="CHECK" />
-		<ScrollViewer>
-			<DataGrid Name="RegisterGrid"
-					  ItemsSource="{Binding TestItems}"
-					  AutoGenerateColumns="True"
-					  GridLinesVisibility="All" />
-		</ScrollViewer>
+
+		<DataGrid ItemsSource="{Binding Registers}" AutoGenerateColumns="True" />
+
 	</StackPanel>
 
 </Window>
